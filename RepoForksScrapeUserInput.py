@@ -53,6 +53,7 @@ for i in repos:
     pagejson = page.json()
     print('urlcompare requests status: ', page)
     if page.status_code == 200: # To check request status. <Response [200]> = OK; 
+        pagestatus = str(pagejson['status'])
         aheadby = str(pagejson['ahead_by'])
         behindby = str(pagejson['behind_by'])
         print('Status: '+pagestatus)
